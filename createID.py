@@ -20,6 +20,8 @@ class CreateID():
             elif self.location=='新北市':
                 self.L[0]=1
                 self.L[1]=5
+            self.L[1]*=5
+            
             if self.gender=='男':
                 self.L[2]=8
             else:
