@@ -42,7 +42,7 @@ class CreateID():
             for sum in range(0,11):
                 all+=self.L[sum]
         
-        for i in range(2,9):
+        for i in range(1,9):
             self.L[i]/=(10-i)
             
         if self.location=='新北市':
