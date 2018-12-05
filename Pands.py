@@ -27,6 +27,12 @@ straw_hat_merged = pd.merge(straw_hat_df, devil_fruit_df, how = "right")#左右�
 #取共通的陣列名,左右決定採用何者以他的行數為標準
 print(straw_hat_merged)
 
+name = ["娜菲鲁塔利·薇薇"]
+occupation = ["阿拉巴斯坦王國公主"]
+princess_vivi_dict = {"name": name,
+                      "occupation": occupation
+}
+
 
 princess_vivi_df = pd.DataFrame(princess_vivi_dict, index = [len(straw_hat_df)])
 
@@ -43,4 +49,4 @@ age_df = pd.DataFrame(age_dict)
 
 # 新增一個變數欄位
 straw_hat_df_w_vivi_age = pd.concat([straw_hat_df_w_vivi, age_df], axis = 1)
-print(straw_hat_df_w_vivi_age)
+print(straw_hat_df_w_vivi_age.stack())#此方法把資料結構變成長的
